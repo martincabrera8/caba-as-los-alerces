@@ -1,0 +1,249 @@
+header {
+    text-align: center;
+    background-color: #556B2F;
+    border: 10px solid brown;
+
+}
+
+header h1 {
+    background-color: white;
+    border: 5px solid brown;
+    font-family: "Noto Sans", sans-serif;
+    color: brown;
+    margin: 10px;
+    text-align: center;
+  }
+
+.barra {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 5px solid brown;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Noto Sans", sans-serif;
+}
+
+a:hover {
+
+  text-decoration: underline;  
+  color: brown;  
+}
+
+#nav-inicio {
+ 
+ background-image: url(imgs/CABAÑA1.JPG);
+ background-size: cover;
+ background-position: center;
+ min-height: 500px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ background-repeat: no-repeat;
+ padding: 40px;
+ margin: 50px;
+ box-sizing: border-box;
+ border: 5px solid brown;
+ font-family: "Noto Sans", sans-serif;;
+
+
+}
+
+#titulo_inicio {
+ font-size: 1.8em;
+ color: white;
+ display: inline-block;
+ border: 5px solid brown ;
+ background-color: #556B2F;
+ line-height: 1.2;
+ text-align: center;
+ margin: auto;
+ padding: 5px;
+ text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+ position: relative;
+ top: -190px;
+ font-family: "Playfair", serif;;
+ 
+}
+
+#titulo_section {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  right: -33.5%;
+  background-color: #556B2F;  
+  color: white;  
+  text-align: center;
+  border: 5px solid brown;  
+  font-size: 1.5em;  
+  margin:  auto;  
+  padding: 10px;
+  
+  
+}
+
+.fotos {
+
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  margin-bottom: 5px;
+  gap: 1px;
+
+}
+
+section img {
+ padding: 5px;
+ width: 300px;
+ height: 350px;
+ object-fit: cover;
+ border: 5px solid brown;
+ margin: 10px;
+
+
+}
+
+#final {
+
+  
+  display: flex;
+  justify-content: center;
+  background-color: #556B2F;  
+  color: white;  
+  text-align: center;
+  border: 5px solid brown;
+  font-size: 20px;  
+  margin: 0 auto;  
+  width: 30%;
+  
+}
+
+#final h3 {
+
+  background-color: #556B2F;
+  border: solid #556B2F;
+
+}
+
+#form {
+
+  display: flex;
+  justify-content: center;
+  border: 10px solid brown;
+  background-color: #556B2F;
+  max-width: 20%;
+  margin: 20px auto;
+
+}
+
+
+
+#form li {
+
+  
+  margin: 5px;
+}
+
+#form h1 {
+
+ text-align: center;
+ color: white;
+ font-size: 30px;
+ margin-left: 20px;
+}
+
+
+
+.localidad{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+    font-family: "Noto Sans", sans-serif;
+    background-color:  #f5f5dc ;
+    font-size:x-large;
+    margin-top: 30px;
+}
+#txt-p2{
+  padding: 9%;
+  margin: 5%;
+  border: 10px solid brown;
+  display: inline-block;
+  max-width: 100%;
+ word-wrap: break-word;
+ font-size: 30px;
+ background-color: #556B2F;
+ text-decoration: underline;
+ text-decoration-color: brown;
+ color: white;
+}
+
+#body_quienes {
+
+  background-color: white;
+
+}
+
+#quienes h1 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  border:10px solid brown;
+  text-align: center;
+  padding: 10px;
+  background-color:#556B2F ;
+  color: white;
+  margin-left: 90px;
+  margin-right: 90px;
+  
+}
+
+.localidad p {
+
+ font-family:"Noto Sans", sans-serif; ;
+}
+
+.localidad h2  {
+ display: inline-block;
+ border: 5px solid brown;
+ background-color: white;
+
+}
+
+.localidad h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  border: 5px solid brown;
+}
+
+
+/* Estilos para el carrusel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px; /* Ajusta el ancho máximo */
+  height: 500px; /* Altura fija */
+  margin: 50px auto; /* Centrado horizontal */
+  overflow: hidden; /* Ocultar contenido desbordante */
+  position: relative;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 2s ease; /* Transición suave */
+}
+
+.carousel-slide img {
+  width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+  flex: 0 0 100%; /* Asegurar que cada imagen ocupe exactamente el 100% del contenedor */
+  height: 100%; /* Se ajusta a la altura del contenedor */
+  object-fit: cover; /* Recorta las imágenes para que se ajusten al contenedor */
+  flex-shrink: 0; /* Evita que las imágenes se reduzcan de tamaño */
+  border-radius: 15px; /* Bordes redondeados */
+}
