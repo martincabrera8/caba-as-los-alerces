@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Los Alces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+</head>
+<body>
+
+    
+    <header>
+        <img src="img/logo.jpg" alt="Logo de Los Alces" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="instalaciones.html" class="nav-link">Instalaciones</a>
+            <a href="ubicacion.html" class="nav-link">Ubicación</a>
+        </nav>
+        
+        <div class="header-buttons">
+            <a href="reservas.html" class="btn">Reservas</a>
+            <a href="consultas.html" class="btn">Consultas</a>
+        </div>
+    </header>
+
+    
+    <section id="juan">
+        <h2>Ubicación</h2>
+        <p>
+            Nos encontramos en un lugar privilegiado, rodeados de naturaleza y con fácil acceso a diversos servicios locales. 
+            Nuestra ubicación te permite disfrutar de la tranquilidad y, a la vez, estar cerca de centros comerciales, 
+            restaurantes, y medios de transporte.
+        </p>
+        
+       
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95592831531873!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5776be6c4b88a0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sau!4v1613704225927!5m2!1sen!2sau"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <p>
+            Ven y visítanos, estamos encantados de recibirte en Los Alces. Si necesitas más información sobre cómo llegar, no dudes en contactarnos.
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+        // Obtén el nombre del archivo actual
+        var currentPath = window.location.pathname.split("/").pop();
+
+        // Añade la clase "active" al enlace de la página actual
+        $('.nav-link').each(function() {
+            if ($(this).attr('href') === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los enlaces
+        $(".nav-link").hover(
+            function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                // Si no es el enlace activo, vuelve al color original
+                if (!$(this).hasClass("active")) {
+                    $(this).css("color", "");
+                }
+            }
+        );
+
+        // Cambia el color al hacer clic en el enlace
+        $(".nav-link").mousedown(function() {
+            $(this).css("color", "violet");
+        }).mouseup(function() {
+            if (!$(this).hasClass("active")) {
+                $(this).css("color", "red");
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los botones
+        $(".btn").hover(
+            function() {
+                $(this).css("background-color", "orange");
+            },
+            function() {
+                $(this).css("background-color", "");
+            }
+        );
+
+        // Cambia el color al hacer clic en el botón
+        $(".btn").mousedown(function() {
+            $(this).css("background-color", "violet");
+        }).mouseup(function() {
+            $(this).css("background-color", "orange");
+        });
+    });
+    </script>
+
+</body>
+</html>

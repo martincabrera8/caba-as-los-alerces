@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones - Los Alces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+</head>
+<body>
+
+    
+    <header>
+        <img src="img/logo.jpg" alt="logo los alces" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="instalaciones.html" class="nav-link">Instalaciones</a>
+            <a href="ubicacion.html" class="nav-link">Ubicación</a>
+        </nav>
+        
+        <div class="header-buttons">
+            <a href="reservas.html" class="btn">Reservas</a>
+            <a href="consultas.html" class="btn">Consultas</a>
+        </div>
+    </header>
+
+    
+    <section id="juan">
+        <h2>Instalaciones y Actividades para Disfrutar</h2>
+        <p>
+            Los Plátanos es el lugar perfecto para olvidarse del trajín diario de la ciudad. 
+            El lugar le permite llevar a cabo actividades durante todo el día con muchísimas posibilidades de recrearse.
+        </p>
+
+        <h3>INSTALACIONES</h3>
+        <ul>
+            <li><strong>3 piletas de natación:</strong> Con extenso solarium, una semiolímpica, una mediana y otra para niños y bebés, con servicio de guardavidas (habilitadas a partir del 19/11 hasta Semana Santa).</li>
+            <li><strong>Cancha de fútbol 7</strong></li>
+            <li><strong>Cancha de fútbol 9</strong></li>
+            <li><strong>Cancha de fútbol 5</strong></li>
+            <li><strong>Cancha de Básquet</strong></li>
+            <li><strong>Cancha de Vóley</strong></li>
+            <li><strong>2 canchas de Paddle:</strong> Una de ellas cubierta.</li>
+            <li><strong>Buffet:</strong> Servicio de minutas a la carta, kiosco y pool.</li>
+            <li><strong>Playroom:</strong> Con Ping-Pong y metegol.</li>
+            <li><strong>Parque:</strong> Un hermoso parque con juegos y calles internas para caminar y andar en bicicleta.</li>
+            <li><strong>Seguridad 24 horas:</strong> Para tu tranquilidad durante toda la estadía.</li>
+            <li><strong>Asistencia técnica constante:</strong> Ante cualquier incidencia en las cabañas.</li>
+        </ul>
+
+        
+        <div class="gallery">
+            <img src="img/PILE1.JPG" alt="Imagen de la pileta" class="gallery-img">
+            <img src="img/PILE4.JPG" alt="Imagen de las canchas" class="gallery-img">
+            <img src="img/PILE3.JPG" alt="Imagen del parque" class="gallery-img">
+        </div>
+    </section>
+
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Imagen ampliada">
+    </div>
+    <script>
+        $(document).ready(function() {
+        // Obtén el nombre del archivo actual
+        var currentPath = window.location.pathname.split("/").pop();
+
+        // Añade la clase "active" al enlace de la página actual
+        $('.nav-link').each(function() {
+            if ($(this).attr('href') === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los enlaces
+        $(".nav-link").hover(
+            function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                // Si no es el enlace activo, vuelve al color original
+                if (!$(this).hasClass("active")) {
+                    $(this).css("color", "");
+                }
+            }
+        );
+
+        // Cambia el color al hacer clic en el enlace
+        $(".nav-link").mousedown(function() {
+            $(this).css("color", "violet");
+        }).mouseup(function() {
+            if (!$(this).hasClass("active")) {
+                $(this).css("color", "red");
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los botones
+        $(".btn").hover(
+            function() {
+                $(this).css("background-color", "orange");
+            },
+            function() {
+                $(this).css("background-color", "");
+            }
+        );
+
+        // Cambia el color al hacer clic en el botón
+        $(".btn").mousedown(function() {
+            $(this).css("background-color", "violet");
+        }).mouseup(function() {
+            $(this).css("background-color", "orange");
+        });
+    });
+    </script>
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>

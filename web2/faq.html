@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Los Alces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+</head>
+<body>
+
+    
+    <header>
+        <img src="img/logo.jpg" alt="logo los alces" class="logo">
+        <nav>
+            <a href="index.html" class="enlace_navegacion">Home</a>
+            <a href="faq.html" class="enlace_navegacion">FAQ</a>
+            <a href="instalaciones.html" class="enlace_navegacion">Instalaciones</a>
+            <a href="ubicacion.html" class="enlace_navegacion">Ubicación</a>
+        </nav>
+        <!-- Botones de Reservas y Consultas -->
+        <div class= "header-buttons">
+            <a href="reservas.html" class="btn">Reservas</a>
+            <a href="consultas.html" class="btn">Consultas</a>
+        </div>
+    </header>
+
+    
+    <section id="contenido_principal">
+        <h2>FAQ (Frequently Asked Questions)</h2>
+        <div class="contenido_faq">
+            <h3>LAS CABAÑAS</h3>
+            <p><strong>1. ¿El precio es por persona?</strong><br>
+            No, el precio es por tamaño de cabaña y los precios varían con relación al tamaño y cantidad de personas.</p>
+
+            <p><strong>1.2 ¿Los precios en el sitio están actualizados?</strong><br>
+            Los precios que figuran en el sitio están actualizados con 2 meses de anticipación y figura en el listado el último día que se actualizó.</p>
+
+            <p><strong>1.3 ¿Los precios de remanentes en liquidación son por cabañas y por todas las fechas?</strong><br>
+            Los precios en Liquidación se ponen únicamente con 5 días de anticipación a la fecha de entrada y son por los días especificados en el recuadro de SOBRANTES DE DISPONIBILIDAD.</p>
+
+            
+            
+            <h3>SEGURIDAD</h3>
+            <p><strong>1. ¿El complejo es seguro?</strong><br>
+            Este es un complejo de 5 hectáreas, totalmente cercado, con alambre perimetral, pared de 2mts de altura, y se puede ingresar únicamente por un solo portón automatizado con seguridad al ingreso.</p>
+
+            
+
+            <h3>INSTALACIONES Y USO DEL COMPLEJO DEPORTIVO</h3>
+            <p><strong>1. ¿Tengo que pagar por el uso de las canchas?</strong><br>
+            No, está todo incluido con el alquiler de la cabaña.</p>
+
+            
+
+            <h3>MASCOTAS</h3>
+            <p><strong>1. ¿Aceptan mascotas?</strong><br>
+            Sí, aceptamos mascotas, pero tienen un costo adicional por día (ver lista de precios).</p>
+
+           
+
+        </div>
+    </section>
+    
+    <script>
+        $(document).ready(function() {
+        // Obtén el nombre del archivo actual
+        var currentPath = window.location.pathname.split("/").pop();
+
+        // Añade la clase "active" al enlace de la página actual
+        $('.nav-link').each(function() {
+            if ($(this).attr('href') === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los enlaces
+        $(".nav-link").hover(
+            function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                // Si no es el enlace activo, vuelve al color original
+                if (!$(this).hasClass("active")) {
+                    $(this).css("color", "");
+                }
+            }
+        );
+
+        // Cambia el color al hacer clic en el enlace
+        $(".nav-link").mousedown(function() {
+            $(this).css("color", "violet");
+        }).mouseup(function() {
+            if (!$(this).hasClass("active")) {
+                $(this).css("color", "red");
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los botones
+        $(".btn").hover(
+            function() {
+                $(this).css("background-color", "orange");
+            },
+            function() {
+                $(this).css("background-color", "");
+            }
+        );
+
+        // Cambia el color al hacer clic en el botón
+        $(".btn").mousedown(function() {
+            $(this).css("background-color", "violet");
+        }).mouseup(function() {
+            $(this).css("background-color", "orange");
+        });
+    });
+</script>
+
+</body>
+</html>

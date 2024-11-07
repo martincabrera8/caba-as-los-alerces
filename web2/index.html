@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Alces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+</head>
+<body>
+
+     
+    <header>
+            <img src="img/logo.jpg" alt="logo los alces" class="logo">
+        
+        <nav>
+             <a href="index.html" class="nav-link">Home</a>
+             <a href="faq.html" class="nav-link">FAQ</a>
+             <a href="instalaciones.html" class="nav-link">Instalaciones</a>
+             <a href="ubicacion.html" class="nav-link">Ubicación</a>
+         </nav>
+         <!-- Botones de Reservas y Consultas -->
+        <div class="header-buttons">
+            <a href="reservas.html" class="btn">Reservas</a>
+            <a href="consultas.html" class="btn">Consultas</a>
+        </div>
+
+    </header>
+
+    
+    <section id="juan">
+        <h2>Bienvenidos a Los Alces</h2>
+        <p>
+            ¡Descubre la experiencia única de hospedarte en nuestras cabañas! Cada detalle ha sido diseñado pensando en tu comodidad. 
+            Nuestras cabañas ofrecen un refugio acogedor, perfecto para desconectar y disfrutar de la naturaleza.
+        </p>
+        
+        <h3>¿Por qué elegirnos?</h3>
+        <ul>
+            <li><strong>Comodidades excepcionales:</strong> Desde cabañas de 2 a 8 personas, todas equipadas con cocina completa, baño privado y áreas de descanso.</li>
+            <li><strong>Ubicación ideal:</strong> Rodeadas de naturaleza, con fácil acceso a centros comerciales y atracciones locales.</li>
+            <li><strong>Actividades para todos:</strong> Disfruta de piscinas, canchas deportivas y zonas de parrillas.</li>
+            <li><strong>Atención personalizada:</strong> Nuestro equipo está siempre disponible para ayudarte en lo que necesites.</li>
+        </ul>
+    
+        <p>
+            ¡Haz tu reserva ahora y vive una experiencia inolvidable! Te esperamos con la mejor atención y un lugar pensado para relajarte y disfrutar.
+        </p>
+    </section>
+
+    <section id="juan">
+        <h2>Un pequeño y lindo recorrido</h2>
+        <img src="img/foto3.jpg" alt="">
+        
+    </section>
+
+    <section id="juan">
+        <h2>Un paseo</h2>
+        <img src="img/foto1.jpg" alt="">
+        
+    </section>
+
+    <section id="juan">
+        <h2>El día da para un buen desayuno</h2>
+        <img src="img/foto4.jpg" alt="">
+        
+    </section>
+
+    <section id="juan">
+        <h2>El Parque con su Ruidos Naturales, RELAX ABSOLUTO</h2>
+        <img src="img/foto2.jpg" alt="">
+    </section>
+
+
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+        // Obtén el nombre del archivo actual
+        var currentPath = window.location.pathname.split("/").pop();
+
+        // Añade la clase "active" al enlace de la página actual
+        $('.nav-link').each(function() {
+            if ($(this).attr('href') === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los enlaces
+        $(".nav-link").hover(
+            function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                // Si no es el enlace activo, vuelve al color original
+                if (!$(this).hasClass("active")) {
+                    $(this).css("color", "");
+                }
+            }
+        );
+
+        // Cambia el color al hacer clic en el enlace
+        $(".nav-link").mousedown(function() {
+            $(this).css("color", "violet");
+        }).mouseup(function() {
+            if (!$(this).hasClass("active")) {
+                $(this).css("color", "red");
+            }
+        });
+
+        // Cambia el color al pasar el mouse sobre los botones
+        $(".btn").hover(
+            function() {
+                $(this).css("background-color", "orange");
+            },
+            function() {
+                $(this).css("background-color", "");
+            }
+        );
+
+        // Cambia el color al hacer clic en el botón
+        $(".btn").mousedown(function() {
+            $(this).css("background-color", "violet");
+        }).mouseup(function() {
+            $(this).css("background-color", "orange");
+        });
+    });
+</script>
+
+
+</body>
+       
+</body>
+</html>
